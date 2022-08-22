@@ -72,7 +72,12 @@ function deleteTask(deleteId) {
   let num = deleteId.replace("delete", "");
 
   let taskDiv = document.querySelector(`#task${num}`);
-  taskDiv.style.display = "none";
+  // taskDiv.style.display = "none";
+  taskDiv.style.opacity = "0";
+  // taskDiv.style.display = "none";
+  let wait = setTimeout(function() {
+    taskDiv.style.display = "none";
+  }, 300);
 }
 
 
