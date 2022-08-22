@@ -23,7 +23,7 @@ body{
 .container{
   max-width: 40rem;
   width: 95%;
-  height: 40rem;
+  min-height: 40rem;
   background: var(--primary-color);
   display: flex;
   flex-direction: column;
@@ -40,6 +40,7 @@ body{
   align-items: center;
   justify-content: flex-start;
 }
+
 .task{
   display: flex;
   justify-content: center;
@@ -51,7 +52,14 @@ body{
   height: 3rem;
   border-radius: 5px;
   position: relative;
-
+  transition: 0.2s;
+  color: var(--secondary-color);
+}
+.task:last-child{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .task p{
   color: var(--primary-color);
@@ -68,6 +76,9 @@ body{
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.task:last-child button{
+  border-bottom-right-radius: 10px;
+}
 
 .check{
   font-size: 2rem;
@@ -77,6 +88,10 @@ body{
   left: 10px;
 }
 .cross{
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+.task button:hover .cross{
   font-size: 2rem;
 }
 .task-name{
