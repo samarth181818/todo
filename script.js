@@ -72,3 +72,13 @@ function deleteTask(taskId) {
   let taskDiv = document.querySelector(`#task${num}`);
   taskDiv.style.display = "none";
 }
+
+
+//ADD with Enter Key
+let addBtn = document.getElementById("add-new");
+document.addEventListener("keypress", function(event){
+  if (event.key === "Enter"){
+    // event.preventDefault();
+    addBtn.click();
+  }
+});
