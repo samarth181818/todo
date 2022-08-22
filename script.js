@@ -67,8 +67,10 @@ function taskDone(taskId) {
 
 
 //Deleting a Task
-function deleteTask(taskId) {
-  let num = taskId.slice(-1);
+function deleteTask(deleteId) {
+  // let num = taskId.slice(-1);
+  let num = deleteId.replace("delete", "");
+
   let taskDiv = document.querySelector(`#task${num}`);
   taskDiv.style.display = "none";
 }
